@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.gradle:gradle-tooling-api
+    versions:
+    - 6.8.1
+    - 6.8.2
+    - 6.8.3
+  - dependency-name: org.codehaus.groovy:groovy
+    versions:
+    - 3.0.7
